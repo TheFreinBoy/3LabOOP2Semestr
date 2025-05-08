@@ -24,6 +24,11 @@ namespace _3LabOOP2Semestr
         {
             InitializeComponent();
         }
+        public void DAButton_Click(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow.MainContent.Content = new UserControl1();
+        }
 
         private void GenerateButtons_Click(object sender, RoutedEventArgs e)
         {

@@ -8,8 +8,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        
         <materialDesign:Card UniformCornerRadius="0">
             <Grid Background="#d9ffde">
+                
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition Height="1.9*"/>
@@ -44,6 +46,11 @@
                             <TextBlock Text="Від" HorizontalAlignment="Center" />
                             <TextBox Margin="0 5 0 0" x:Name="FromTextBox"/>
                         </StackPanel>
+                        <Button Grid.ColumnSpan="2" Height="35" Width="80" materialDesign:ButtonAssist.CornerRadius="15" Style="{StaticResource MaterialDesignFlatButton}" 
+                                Background="#c0ff6e" Content="ДА" Foreground="Black" FontFamily="pack://application:,,,/Fonts/#Lady Marmalade" FontSize="20" Margin="0 0 0 90"
+                                Click="DAButton_Click">
+                            
+                        </Button>
                         <StackPanel Grid.Column="1">
                             <TextBlock Text="До" HorizontalAlignment="Center" />
                             <TextBox Margin="0 5 0 0" x:Name="ToTextBox"/>
@@ -60,7 +67,6 @@
                         <StackPanel Grid.Column="3">
                             <Button Margin="0 17 0 0" HorizontalAlignment="Center" Width="140" Height="40" materialDesign:ButtonAssist.CornerRadius="15" Style="{StaticResource MaterialDesignFlatButton}"
                                     Background="#c0ff6e" Content="Більше кнопок" Click="GenerateButtons_Click" Foreground="Black" FontFamily="pack://application:,,,/Fonts/#Lady Marmalade" FontSize="20"/>
-
                             <Button Margin="0 15 0 0" HorizontalAlignment="Center" Width="140" Height="40" materialDesign:ButtonAssist.CornerRadius="15" Style="{StaticResource MaterialDesignFlatButton}"
                                     Background="#c0ff6e" Content="Вилучити" Click="RemoveMultiples_Click" Foreground="Black" FontFamily="pack://application:,,,/Fonts/#Lady Marmalade" FontSize="20">
                             </Button>
@@ -84,5 +90,6 @@
                 </Grid>
             </Grid>
         </materialDesign:Card>
+        <ContentControl x:Name="MainContent"/>
     </Grid>
 </Window>
